@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kovil_app/screens/about.dart';
-import 'package:kovil_app/settings.dart';
+import 'package:kovil_app/screens/settings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
