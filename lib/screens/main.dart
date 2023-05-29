@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kovil_app/home_page.dart';
-import 'package:kovil_app/about.dart';
-import 'package:kovil_app/settings.dart';
+import 'package:kovil_app/screens/home_page.dart';
 
 void main() {
   runApp(const MainApp());

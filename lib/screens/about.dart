@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kovil_app/about.dart';
+import 'package:kovil_app/screens/home_page.dart';
 import 'package:kovil_app/settings.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class AboutPage extends StatefulWidget {
+  const AboutPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<AboutPage> createState() => _AboutPageState();
 }
 
 DateTime now = DateTime.now();
@@ -28,7 +28,7 @@ const Map<int, String> monthLookup = {
 
 enum Items {home, about, settings}
 
-class _HomePageState extends State<HomePage> {
+class _AboutPageState extends State<AboutPage> {
   Items? selectedMenu;
 
   @override
@@ -83,17 +83,17 @@ class _HomePageState extends State<HomePage> {
           },
           itemBuilder: (BuildContext context) => <PopupMenuEntry<Items>>[
             const PopupMenuItem<Items>(
-              value: Items.about,
-              child: Text('About'),
-            ),
-            const PopupMenuItem<Items>(
               value: Items.settings,
               child: Text('Settings'),
+            ),
+            const PopupMenuItem<Items>(
+              value: Items.home,
+              child: Text('Home'),
             ),
           ],
         ),
       ),
-      body: const Center(child: Text('HomePage')),
+      body: const Center(child: Text('About Page')),
     );
   }
 }
