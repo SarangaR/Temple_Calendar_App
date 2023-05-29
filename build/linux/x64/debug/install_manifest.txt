@@ -1,0 +1,12 @@
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/kovil_app
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/saranga/Documents/KovilApp_ws/kovil_app/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.smcbin
