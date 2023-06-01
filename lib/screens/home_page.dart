@@ -1,6 +1,12 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import 'package:kovil_app/screens/about.dart';
-import 'package:kovil_app/screens/settings.dart';
+import 'package:kovil_app/widgets/custom_description_text.dart';
+import 'package:kovil_app/widgets/custom_table.dart';
+import 'package:kovil_app/widgets/date_picker.dart';
+import 'package:kovil_app/widgets/global_appbar.dart';
+import 'package:kovil_app/widgets/sun.dart';
+import 'package:kovil_app/global_vars.dart' as global;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,91 +15,64 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-DateTime now = DateTime.now();
-DateTime date = DateTime(now.year, now.month, now.day);
-const Map<int, String> monthLookup = {
-  1: "Jan",
-  2: "Feb",
-  3: "Mar",
-  4: "Apr",
-  5: "May",
-  6: "Jun",
-  7: "Jul",
-  8: "Aug",
-  9: "Sept",
-  10: "Oct",
-  11: "Nov",
-  12: "Dec"
-};
-
-enum Items {home, about, settings}
-
 class _HomePageState extends State<HomePage> {
-  Items? selectedMenu;
-
-  @override
-  void initState() {
-    super.initState();
-    setState(() {
-      updateDate();
-    });
-  }
-
-  void updateDate() {
-    now = DateTime.now();
-    date = DateTime(now.year, now.month, now.day);
-  }
-
-  void switchPage(Items item) {
-    switch (item) {
-      case Items.about:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const AboutPage()),
-        );
-        break;
-      case Items.settings:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const SettingsPage()),
-        );
-      case Items.home:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const HomePage()),
-        );
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("${date.day} ${monthLookup[date.month]} ${date.year}"),
-        backgroundColor: Colors.deepOrange.withOpacity(0.75),
-        centerTitle: true,
-        leading: PopupMenuButton<Items>(
-          icon: const Icon(Icons.menu),
-          initialValue: selectedMenu,
-          onSelected: (Items item) {
-            setState(() {
-              selectedMenu = item;
-              switchPage(item);
-            });
-          },
-          itemBuilder: (BuildContext context) => <PopupMenuEntry<Items>>[
-            const PopupMenuItem<Items>(
-              value: Items.about,
-              child: Text('About'),
-            ),
-            const PopupMenuItem<Items>(
-              value: Items.settings,
-              child: Text('Settings'),
-            ),
-          ],
-        ),
+      backgroundColor: Colors.white,
+      appBar: const GlobalAppBar(),
+      body: Column(
+        children: [
+          const Sun(),
+          const CustomTable(),
+          const CustomDescriptionText(),
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: [
+              FloatingActionButton.extended(
+                onPressed: () {
+                  DateTime currDate = DateTime(global.year, global.month, global.day);
+                  global.manualDateChange(currDate.subtract(const Duration(days: 1)));
+                  Navigator.popAndPushNamed(context, '/home');
+                },
+                icon: const Icon(Icons.arrow_back),
+                label: const Text('Previous'),
+              ),
+              const DatePicker(),
+              FloatingActionButton.extended(
+                onPressed: () {
+                  DateTime currDate = DateTime(global.year, global.month, global.day);
+                  global.manualDateChange(currDate.add(const Duration(days: 1)));
+                  Navigator.popAndPushNamed(context, '/home');
+                },
+                label: const Row(
+                  children: <Widget>[
+                    Text("Next"), 
+                    Icon(Icons.arrow_forward)
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                width: 28,
+              ),
+              FloatingActionButton.extended(
+                onPressed: () {
+                  global.updateDate();
+                  Navigator.popAndPushNamed(context, '/home');
+                },
+                icon: const Icon(Icons.refresh),
+                label: const Text('Today'),
+              )
+            ]
+          ),
+        ]
       ),
-      body: const Center(child: Text('HomePage')),
     );
   }
 }
