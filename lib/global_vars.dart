@@ -1,9 +1,10 @@
 library kovil_app.global;
 
-import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'dart:convert';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 Map<int, String> dayLookup = {
   1: "Monday",
@@ -16,6 +17,7 @@ Map<int, String> dayLookup = {
 };
 Map<String, dynamic> jsons = {};
 bool autoJsonLoad = true;
+bool invalidTimeZone = false;
 
 DateTime dt = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
 String dateStr = "${dt.day} ${monthLookup[dt.month]} ${dt.year}";
@@ -25,9 +27,13 @@ int day = DateTime.now().day;
 String dayStr = dayLookup[DateTime.now().weekday.toInt()].toString();
 String correctedDay = day < 10 ? "0$day" : day.toString();
 
-String timeZone = "";
+String timeZone = "Eastern";
 bool autoTimezoneSync = true;
 Map<String, dynamic> calendarInfo = {};
+
+String? appDir = "";
+
+SharedPreferences? sharedPreferences;
 
 const Map<int, String> monthLookup = {
   1: "Jan",
@@ -63,7 +69,9 @@ void getLocalTimezone() {
     timeZone = "Mountain";
   }
   else {
+    timeZone = "Eastern";
     autoTimezoneSync = false;
+    invalidTimeZone = true;
   }
 }
 
@@ -86,15 +94,18 @@ void manualDateChange(DateTime currDate) {
   dayStr = dayLookup[currDate.weekday.toInt()].toString();
 }
 
+Future<void> getSharedPreferences() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  sharedPreferences = prefs;
+}
+
 Future<void> readJson() async {
     getLocalTimezone();
-    String path1 = "json_data/$year-${year+1}.Srirangam.json";
-    String path2 = "json_data/$year-${year+1}.Eastern Time.json";
-    String path3 = "json_data/$year-${year+1}.Central Time.json";
-    String path4 = "json_data/$year-${year+1}.Pacific Time.json";
-    String path5 = "json_data/$year-${year+1}.Mountain Time.json";
-
-    String tzpth = "json_data/timezone.txt";
+    String path1 = "assets/$year-${year+1}.Srirangam.json";
+    String path2 = "assets/$year-${year+1}.Eastern Time.json";
+    String path3 = "assets/$year-${year+1}.Central Time.json";
+    String path4 = "assets/$year-${year+1}.Pacific Time.json";
+    String path5 = "assets/$year-${year+1}.Mountain Time.json";
 
     final String response1 = await rootBundle.loadString(path1);
     final String response2 = await rootBundle.loadString(path2);
@@ -102,7 +113,7 @@ Future<void> readJson() async {
     final String response4 = await rootBundle.loadString(path4);
     final String response5 = await rootBundle.loadString(path5);
     
-    final String tzresp = await rootBundle.loadString(tzpth); 
+    final String? tzresp = sharedPreferences?.getString("setTimezone");
 
     final data1 = await json.decode(response1);
     final data2 = await json.decode(response2);
@@ -110,9 +121,9 @@ Future<void> readJson() async {
     final data4 = await json.decode(response4);
     final data5 = await json.decode(response5);
 
-    if (tzresp != "") {
+    if (tzresp != null) {
       autoTimezoneSync = false;
-      timeZone = tzresp;
+      timeZone = tzresp.toString();
     }
     else {
       autoTimezoneSync = true;
@@ -131,16 +142,11 @@ Future<void> readJson() async {
       if (jsons[timeZone] != null) {
         calendarInfo = jsons[timeZone];
       }
-      else {
-        throw Exception("Invalid timezone: $timeZone");
-      }
     }
 }
 
 void writeTz(String tz) {
-  String tzpth = "json_data/timezone.txt";
-  File ptz = File(tzpth);
-  ptz.writeAsStringSync(tz);
+  sharedPreferences?.setString("setTimezone", tz);
 }
 
 void reloadJson() {

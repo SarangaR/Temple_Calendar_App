@@ -4,6 +4,19 @@
       jars="/home/saranga/Documents/KovilApp_ws/kovil_app/build/app/intermediates/flutter/release/libs.jar"
       resolved="__local_aars__:/home/saranga/Documents/KovilApp_ws/kovil_app/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
+      name="/home/saranga/Documents/KovilApp_ws/kovil_app/android@@:shared_preferences_android::release"
+      jars="/home/saranga/Documents/KovilApp_ws/kovil_app/build/shared_preferences_android/.transforms/138db0dcb07267d9d7ddf5fabb93740d/transformed/out/jars/classes.jar:/home/saranga/Documents/KovilApp_ws/kovil_app/build/shared_preferences_android/.transforms/138db0dcb07267d9d7ddf5fabb93740d/transformed/out/jars/libs/R.jar"
+      resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
+      folder="/home/saranga/Documents/KovilApp_ws/kovil_app/build/shared_preferences_android/.transforms/138db0dcb07267d9d7ddf5fabb93740d/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="/home/saranga/Documents/KovilApp_ws/kovil_app/android@@:path_provider_android::release"
       jars="/home/saranga/Documents/KovilApp_ws/kovil_app/build/path_provider_android/.transforms/571935122a5bf5ed9d1e2765d8d776e3/transformed/out/jars/classes.jar:/home/saranga/Documents/KovilApp_ws/kovil_app/build/path_provider_android/.transforms/571935122a5bf5ed9d1e2765d8d776e3/transformed/out/jars/libs/R.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"

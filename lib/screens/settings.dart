@@ -15,6 +15,13 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const GlobalAppBar(),
+      bottomNavigationBar: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.popAndPushNamed(context, "/home");
+        },
+        icon: const Icon(Icons.arrow_back),
+        label: const Text("Back")
+      ),
       body: ListView(
         children: <Widget>[
           ListTile(

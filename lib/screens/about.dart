@@ -11,10 +11,20 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: GlobalAppBar(),
-      body: Center(
-        child: Text("About Page"),
+    return Scaffold(
+      appBar: const GlobalAppBar(),
+      bottomNavigationBar: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.popAndPushNamed(context, "/home");
+        },
+        icon: const Icon(Icons.arrow_back),
+        label: const Text("Back")
+      ),
+      body: const Center(
+        child: Text(
+          "About Page\n\nDevelopment Version",
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }

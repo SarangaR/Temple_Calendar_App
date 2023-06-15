@@ -28,9 +28,9 @@ class _DatePickerState extends State<DatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton.extended(
-      onPressed: () => _selectDate(context), 
-      label: const Text('Calendar'),
+    return FloatingActionButton(
+      onPressed: () => _selectDate(context),
+      child: const Icon(Icons.calendar_month),
     );
   }
 }

@@ -7,31 +7,8 @@ import 'package:kovil_app/screens/settings.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await global.readJson();
-  final runnableApp = _buildRunnableApp(
-    isWeb: false,
-    webAppWidth: 480,
-    app: const MainApp(),
-  );
-  runApp(runnableApp);
-}
-
-Widget _buildRunnableApp({
-  required bool isWeb,
-  required double webAppWidth,
-  required Widget app,
-}) {
-  if (!isWeb) {
-    return app;
-  }
-
-  return Center(
-    child: ClipRect(
-      child: SizedBox(
-        width: webAppWidth,
-        child: app,
-      ),
-    ),
-  );
+  await global.getSharedPreferences();
+  runApp(const MainApp());
 }
 
 DateTime now = DateTime.now();

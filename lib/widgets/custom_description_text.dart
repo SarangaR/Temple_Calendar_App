@@ -21,22 +21,37 @@ class _CustomDescriptionTextState extends State<CustomDescriptionText> {
         padding: const EdgeInsets.only(bottom: 10.0),
         child: Column(
           children: [
-            Text(
-              getEventString(),
-              style: const TextStyle(
-                fontSize: 20,
-                color: Colors.red,
-              ),
-            ),
-            const SizedBox(
-              height: 30
-            ),
-            SizedBox(
-              width: 1000,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
               child: Text(
-                global.calendarInfo[global.year.toString()][global.month.toString()][global.correctedDay]["sankalpam"],
+                getEventString(),
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.red,
+                ),
+                textAlign: TextAlign.center,
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Text(
+                "${global.calendarInfo[global.year.toString()][global.month.toString()][global.correctedDay]["sankalpam"]}",
+                textAlign: TextAlign.center,
+              )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30.0),
+              child: Visibility(
+                visible: global.invalidTimeZone,
+                child: const Text(
+                  "Invalid TimeZone, defaulting to Eastern",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       )

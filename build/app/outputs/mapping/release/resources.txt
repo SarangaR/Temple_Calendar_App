@@ -12,6 +12,7 @@ music
 verticalText
 PICTURES
 android.util.LongArray
+FlutterSharedPreferences
 getUncaughtExceptionPreHandler
 onBackPressed
 adapter
@@ -25,15 +26,15 @@ androidx.window.layout.WindowInfoTrac...
 ActivityRule
 click
 0
-left
 kotlin.jvm.functions.
-kotlinx.coroutines.DefaultExecutor
+left
 WindowInfoTrackerImpl.kt
+kotlinx.coroutines.DefaultExecutor
 TextInputClient.updateEditingStateWit...
 registerWith
 SystemSoundType.alert
-REDUCE_MOTION
 kotlin.internal.JRE7PlatformImplement...
+REDUCE_MOTION
 DECREASE
 $splitPairFilters
 PORTRAIT_DOWN
@@ -57,6 +58,7 @@ displayFeatures
 io.flutter.embedding.android.SplashSc...
 SwitchIntDef
 component
+dev.flutter.pigeon.SharedPreferencesA...
 java.lang.Module
 SUSPEND
 this$0
@@ -90,8 +92,8 @@ decimal
 SystemChrome.setSystemUIOverlayStyle
 ROOT
 TextInput.setEditableSizeAndTransform
-COMPLETING_WAITING_CHILDREN
 enable_state_restoration
+COMPLETING_WAITING_CHILDREN
 ClassVerificationFailure
 _invoked
 locale
@@ -132,6 +134,7 @@ SplitPairRule
 executor
 IS_TEXT_FIELD
 kotlinx.coroutines.internal.StackTrac...
+dev.flutter.pigeon.SharedPreferencesA...
 write
 TextInputType.none
 onStop
@@ -148,8 +151,8 @@ DiscouragedApi
 onPostResume
 io.flutter.Entrypoint
 CLIP_RECT
-other
 wait
+other
 birthDateYear
 FlutterActivityAndFragmentDelegate
 IS_LINK
@@ -195,8 +198,8 @@ repeatCount
 noDrop
 $activityFilters
 flutter/keydata
-void
 read
+void
 memoryPressure
 flutter/restoration
 touch
@@ -204,8 +207,8 @@ onUserLeaveHint
 CommonPool
 _cur
 onResume
-java.util.List
 OFFER_SUCCESS
+java.util.List
 hybrid
 UNEXPECTED:
 kotlin.Int
@@ -216,11 +219,11 @@ sidecarDisplayFeatures
 parkedWorkersStack
 RINGTONES
 IS_IMAGE
-COMPLETING_ALREADY
 PHONE
+COMPLETING_ALREADY
 systemNavigationBarColor
-PlatformPlugin
 cause
+PlatformPlugin
 displayCutout
 java.lang.Iterable
 rect
@@ -254,6 +257,7 @@ android.widget.HorizontalScrollView
 password
 kotlinx.coroutines.scheduler.keep.ali...
 INCREASE
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
 NO_TARGET
 jar
 state
@@ -271,9 +275,10 @@ POSTURE_FLAT
 kotlin.collections.ListIterator
 oemFeature.bounds
 dev.flutter.pigeon.PathProviderApi.ge...
+dev.flutter.pigeon.SharedPreferencesA...
 CUSTOM_ACTION
-delimiters
 TextInputClient.updateEditingStateWit...
+delimiters
 PROTECTED
 cached_engine_id
 STANDARD
@@ -338,11 +343,12 @@ EDGE_TO_EDGE
 description
 LEAN_BACK
 _isTerminated
-SEALED
 LifecycleChannel
+SEALED
 CREATED
 textScaleFactor
 namePrefix
+SharedPreferencesPlugin
 io.flutter.embedding.android.NormalTheme
 Dispatchers.Main
 FlutterSurfaceView
@@ -384,6 +390,7 @@ embeddingCallback
 SCROLL_LEFT
 HapticFeedbackType.heavyImpact
 TextInputAction.search
+dev.flutter.pigeon.SharedPreferencesA...
 windowBackend
 InputConnectionAdaptor
 flutter/platform
@@ -402,6 +409,7 @@ viewFocused
 HEAVY_IMPACT
 light
 kotlin.Short
+dev.flutter.pigeon.SharedPreferencesA...
 bounds
 primaryActivityName.packageName
 PUBLIC
@@ -441,8 +449,8 @@ birthDateDay
 .immediate
 TextInputAction.unspecified
 libflutter.so
-char
 width
+char
 PORTRAIT_UP
 IMMERSIVE
 kotlinx.coroutines.fast.service.loader
@@ -468,8 +476,9 @@ io.flutter.embedding.android.EnableIm...
 _consensus
 SCROLL_UP
 WrongConstant
-kotlin.collections.Iterator
 CLOSED_EMPTY
+kotlin.collections.Iterator
+dev.flutter.pigeon.SharedPreferencesA...
 job
 TextInputClient.requestExistingInputS...
 setLocale
@@ -505,8 +514,8 @@ $splitRule
 getModule
 extent
 resizeColumn
-sidecarCompat
 java.specification.version
+sidecarCompat
 plugins
 kotlinx.coroutines.scheduler.blocking...
 kotlin.Cloneable
@@ -515,8 +524,8 @@ IS_FOCUSED
 PlatformViewsController
 ReceiveQueued
 systemStatusBarContrastEnforced
-getSuppressed
 kotlin.reflect.jvm.internal.Reflectio...
+getSuppressed
 PARKING
 FOLD
 DartMessenger
@@ -524,8 +533,8 @@ HIGH_CONTRAST
 ON_ANY
 MOVE_CURSOR_BACKWARD_BY_WORD
 removeViewImmediate
-kotlin.Unit
 kotlinx.coroutines.scheduler.resoluti...
+kotlin.Unit
 removeView
 route
 ON_PAUSE
@@ -545,8 +554,8 @@ SystemSoundType.click
 background_mode
 popRoute
 NAMES_ROUTE
-throwableMethods
 defaultDisplay
+throwableMethods
 completion
 clearFocus
 secondaryActivityIntent
@@ -557,6 +566,7 @@ LOCALE
 InlinedApi
 personNamePrefix
 activityComponent.packageName
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
 MEDIUM_IMPACT
 feature.rect
 missingDelimiterValue
@@ -604,6 +614,7 @@ kotlin.collections.Map
 ENQUEUE_FAILED
 cached_engine_group_id
 statusBarColor
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
 java.lang.Boolean
 contentCommitMimeTypes
 continuation
@@ -623,8 +634,8 @@ io.flutter.embedding.android.LeakVM
 pushRouteInformation
 resize
 TextEditingDelta
-TextInputAction.next
 DEFAULT
+TextInputAction.next
 setInitialRoute
 DROP_OLDEST
 splitInfoList
@@ -649,13 +660,14 @@ isolate_snapshot_data
 TextInput.finishAutofillContext
 SPELLOUT
 surface
+dev.flutter.pigeon.SharedPreferencesA...
 signed
 _bounds
 it
 PlatformChannel
 params
-UNDECIDED
 FlutterView
+UNDECIDED
 announce
 TextInputType.address
 PLAIN_TEXT
@@ -668,8 +680,8 @@ fullStreetAddress
 telephoneNumber
 secondaryActivityStack
 RIGHT
-CancellableContinuation
 placeholderIntent
+CancellableContinuation
 mServedView
 onDestroy
 IS_KEYBOARD_KEY
@@ -690,8 +702,8 @@ io.flutter.EntrypointUri
 mH
 VIRTUAL_DISPLAY_PLATFORM_VIEW
 IS_SLIDER
-loadingUnitId
 newIndent
+loadingUnitId
 resizeUpLeftDownRight
 KeyboardManager
 RESUMED
@@ -783,8 +795,8 @@ kotlin.Function
 RTL
 long
 SystemUiMode.immersive
-HALF_OPENED
 kotlinx.coroutines.channels.defaultBu...
+HALF_OPENED
 activity.windowManager.currentWindowM...
 $this$$receiver
 key
@@ -863,8 +875,8 @@ Dispatchers.Main.immediate
 dev.flutter.pigeon.PathProviderApi.ge...
 splitRules
 ON_CLOSE_HANDLER_INVOKED
-java.lang.Object
 REMOVED_TASK
+java.lang.Object
 location
 splitInfo
 SystemChrome.setSystemUIChangeListener
@@ -1013,6 +1025,7 @@ com.google.android.inputmethod.latin
 emit
 SCROLL_DOWN
 AccessibilityBridge
+dev.flutter.pigeon.SharedPreferencesA...
 Marking id:accessibility_action_clickable_span:2131034112 used because it matches string pool constant acc
 Marking id:accessibility_custom_action_0:2131034113 used because it matches string pool constant acc
 Marking id:accessibility_custom_action_1:2131034114 used because it matches string pool constant acc
